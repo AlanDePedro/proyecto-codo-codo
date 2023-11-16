@@ -44,15 +44,16 @@
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
 }
-
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #dbc2f896;
+}
+/* header */
 html {
     font-family: var(--base-font);
     font-size: 62.5%;
@@ -60,8 +61,8 @@ html {
 }
 
 /* /saco los subrayados de los enlaces/ */
-a {
-    text-decoration:none;
+.nabvar {
+    text-decoration: none;
     font-family: inherit;
     color: inherit;
 }
@@ -153,169 +154,100 @@ header {
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
 }
-
-
+/* formulario */
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-}
-
-/* Estilos para la sección de productos destacados */
-.destacado {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Estilos para cada producto */
-.product {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para la imagen del producto */
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Estilos para el título del producto */
-.product h3 {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-}
-
-/* Estilos para la descripción del producto */
-.product p {
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-}
-
-/* Estilos para el precio del producto */
-.product .price {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #007bff;
-    text-align: center;
-}
-
-
-.filter-container{
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.filter-section{
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-}
-
-
-.pagination-cont {
     width: 100%;
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.pagination {
-    display: inline-block;
-    margin: 0 auto;
+form {
+    width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 18px;
+   }
+   .formulario h2 {
+    font-size: 26px; /* Ajusta el tamaño del texto según tus preferencias */
+    font-family: sans-serif;
 }
-
-.page-link {
-    display: inline-block;
-    margin: 0 5px;
-    background-color: #313031;
-
+#rpedido {
+    text-align: center; /* Alinea el texto al centro */
+    margin-top: 20px;   /* Agrega un margen superior para separar del borde superior */
 }
-
-.page-link:hover {
-    background-color: #000000;
-
+#form-container button {
+    padding: 10px 20px; /* Ajusta el padding según tus necesidades */
+    border-radius: 8px; /* Hace las esquinas del botón redondeadas */
+    background-color: rgb(245, 25, 10); /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Quita el borde del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
-
-.page-link.active {
-    background-color: #333;
+   label {
+    display: block;
+    margin-bottom: 5px;
+   }
+   
+   input[type="text"],
+   input[type="file"],
+   textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   }
+   
+   input[type="submit"] {
+    background-color: #007bff;
     color: white;
-}
-
-
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   }
+   
+   input[type="submit"]:hover {
+    background-color: #0056b3;
+   }
+   
+   input[type="reset"] {
+    background-color: #ffc107;
+    color: white;
+    padding: 100px 200px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+   }
+   
+   input[type="reset"]:hover {
+    background-color: #e0a800;
+   }
 
 /* footer */
-.footer {
-    max-width: 100%;
-    background-color: #333;
-
+.pie-pagina{
+    background-color: #1D1A2F;
     padding: 20px;
-
     text-align: center;
-
-    color: #fff;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-    clear: none;
+    color: #ffffff;
+   display: flex;
+   justify-content: space-around;
 }
 
-
-.footer ul {
-
+.pie-pagina ul {
     list-style-type: none;
-
     padding: 0;
-
+    font-size: 1.5rem;
 }
 
-
-.footer ul li {
-
-    display: inline;
-
-    margin: 0 10px;
-
+.contacto {
+    font-size: 2rem;
 }
 
-
-.footer ul li a {
-
-    color: #fff;
-
-    text-decoration: none;
-
-}
-
-
-.footer ul li a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-
-
-
-@media (min-width: 768px) {
-    .product {
-        width: calc(33.33% - 20px);
-    }
-
-    .filter {
-        max-width: 300px;
-        margin-right: 20px;
-    }
+.pago {
+    font-size: 2rem;
 }

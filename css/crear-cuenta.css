@@ -45,14 +45,17 @@
     --spacing-8: 0.8rem;
 }
 
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    background-color: #dbc2f896;
+}
+
+/* header */
 html {
     font-family: var(--base-font);
     font-size: 62.5%;
@@ -60,8 +63,8 @@ html {
 }
 
 /* /saco los subrayados de los enlaces/ */
-a {
-    text-decoration:none;
+.nabvar {
+    text-decoration: none;
     font-family: inherit;
     color: inherit;
 }
@@ -154,103 +157,25 @@ header {
     font-size: var(--font-medium);
 }
 
+/* formulario */
 
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+
+.formulario {
+    width: 800px;
     padding: 20px;
-}
-
-/* Estilos para la sección de productos destacados */
-.destacado {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-/* Estilos para cada producto */
-.product {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    padding: 10px;
+    height: 100vh;
     background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    margin-top: 100px;
+   font-size: 24px;
+   font-family: 'Times New Roman', Times, serif;
+    
 }
-
-/* Estilos para la imagen del producto */
-.product img {
-    max-width: 100%;
-    height: auto;
+.formulario h2 {
+    font-size: 26px; /* Ajusta el tamaño del texto según tus preferencias */
+    font-family: sans-serif;
 }
-
-/* Estilos para el título del producto */
-.product h3 {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-}
-
-/* Estilos para la descripción del producto */
-.product p {
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-}
-
-/* Estilos para el precio del producto */
-.product .price {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #007bff;
-    text-align: center;
-}
-
-
-.filter-container{
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.filter-section{
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-}
-
-
-.pagination-cont {
-    width: 100%;
-    text-align: center;
-}
-
-.pagination {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-.page-link {
-    display: inline-block;
-    margin: 0 5px;
-    background-color: #313031;
-
-}
-
-.page-link:hover {
-    background-color: #000000;
-
-}
-
-.page-link.active {
-    background-color: #333;
-    color: white;
-}
-
-
 
 /* footer */
 .footer {
@@ -305,17 +230,86 @@ header {
 
 }
 
+/* formulario */
 
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+form {
+    width: 800px;
+    padding: 20px;
 
+    background-color: white;
+    border-radius: 5px;
+}
 
-@media (min-width: 768px) {
-    .product {
-        width: calc(33.33% - 20px);
-    }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-    .filter {
-        max-width: 300px;
-        margin-right: 20px;
-    }
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="reset"] {
+    background-color: #ffc107;
+    color: white;
+    padding: 100px 200px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover {
+    background-color: #e0a800;
+}
+
+/* footer */
+.pie-pagina {
+    background-color: #1D1A2F;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pie-pagina ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.contacto {
+    font-size: 2rem;
+}
+
+.pago {
+    font-size: 2rem;
 }
