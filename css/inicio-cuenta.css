@@ -159,19 +159,19 @@ header {
 }
 
 .container {
-    width: 300px;
-    padding: 16px;
+    width: 400px;
+    padding: 28px;
     background-color: white;
     margin: 0 auto;
     margin-top: 100px;
-    border: 1px solid black;
-    border-radius: 4px;
+    
+    font-size: 24px;
 }
 /* formulario */
 
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 15px;
+    padding: 24px;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
@@ -201,7 +201,7 @@ input[type=text]:focus, input[type=password]:focus {
     max-width: 100%;
     background-color: #333;
 
-    padding: 50px;
+    padding: 20px;
 
     text-align: center;
 
@@ -209,7 +209,7 @@ input[type=text]:focus, input[type=password]:focus {
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content: space-around;
 
     align-items: center;
     clear: none;
@@ -227,7 +227,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 .footer ul li {
 
-    display: inline;
+    display: inline-block;
 
     margin: 0 10px;
 

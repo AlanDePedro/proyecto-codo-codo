@@ -44,16 +44,15 @@
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
 }
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #dbc2f896;
-}
-/* header */
 html {
     font-family: var(--base-font);
     font-size: 62.5%;
@@ -61,8 +60,8 @@ html {
 }
 
 /* /saco los subrayados de los enlaces/ */
-.nabvar {
-    text-decoration: none;
+a {
+    text-decoration:none;
     font-family: inherit;
     color: inherit;
 }
@@ -154,100 +153,152 @@ header {
     padding: var(--spacing-8) var(--spacing-16);
     font-size: var(--font-medium);
 }
-/* formulario */
 
-.container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* filtro */
+
+
+/* Estilos para el filtro de búsqueda */
+.filter-container {
+    float: left; /* Coloca el filtro a la izquierda */
+    width: 20%; /* Ancho del filtro, ajusta según sea necesario */
+    padding: 10px; /* Añade espacio interno al filtro */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
-form {
-    width: 800px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    font-size: 18px;
-   }
-   .formulario h2 {
-    font-size: 26px; /* Ajusta el tamaño del texto según tus preferencias */
-    font-family: sans-serif;
+
+.search,
+.sort,
+.price-filter,
+.category-filter {
+    margin-bottom: 10px; /* Añade espacio entre secciones del filtro */
 }
-#rpedido {
-    text-align: center; /* Alinea el texto al centro */
-    margin-top: 20px;   /* Agrega un margen superior para separar del borde superior */
-}
-#form-container button {
-    padding: 10px 20px; /* Ajusta el padding según tus necesidades */
-    border-radius: 8px; /* Hace las esquinas del botón redondeadas */
-    background-color: rgb(245, 25, 10); /* Color de fondo del botón */
+
+button {
+    background-color: #4CAF50; /* Color de fondo del botón (ajusta según sea necesario) */
     color: white; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
+    padding: 10px; /* Añade espacio interno al botón */
+    border: none; /* Elimina el borde del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
-   label {
-    display: block;
-    margin-bottom: 5px;
-   }
-   
-   input[type="text"],
-   input[type="file"],
-   textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-   }
-   
-   input[type="submit"] {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-   }
-   
-   input[type="submit"]:hover {
-    background-color: #0056b3;
-   }
-   
-   input[type="reset"] {
-    background-color: #ffc107;
-    color: white;
-    padding: 100px 200px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-   }
-   
-   input[type="reset"]:hover {
-    background-color: #e0a800;
-   }
+
+/* Estilos para las etiquetas "Nuevo" */
+.card-item__tag {
+    background-color: red; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    padding: 5px 10px; /* Añade espacio interno a la etiqueta */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para la tabla de productos */
+.product-table {
+    width: 80%; /* Ancho de la tabla, ajusta según sea necesario */
+    border-collapse: collapse; /* Fusiona los bordes de las celdas */
+    margin-left: 5px; /* Añade espacio entre el filtro y la tabla */
+}
+
+/* Estilos para la lista de productos */
+.product-list {
+    width: 80%; /* Ancho de la lista, ajusta según sea necesario */
+    margin-left: 5px; /* Añade espacio entre el filtro y la lista */
+    display: flex; /* Usa flexbox para organizar los productos en una fila */
+    flex-wrap: wrap;/* Permite que los productos se envuelvan en la siguiente línea */
+    gap: 10px;  /* Distribuye uniformemente los productos en la fila */
+    
+}
+
+.product-table td {
+    border: 1px solid #ddd; /* Borde de las celdas */
+    padding: 10px; /* Añade espacio interno a las celdas */
+    text-align: center; /* Centra el texto en las celdas */
+    flex: 0 0 calc(100% / 3); /* Tamaño de las columnas */
+}
+
+.product-item {
+    width: 30%; /* Ancho de cada producto, ajusta según sea necesario */
+    margin-bottom: 20px; /* Espacio entre productos */
+    float: left; /* Coloca los productos en una fila */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.product-table img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
+}
+
+/* Clearfix para evitar colapsar márgenes */
+.main-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
 
 /* footer */
-.pie-pagina{
-    background-color: #1D1A2F;
+.footer {
+    max-width: 100%;
+    background-color: #333;
+
     padding: 20px;
+
     text-align: center;
-    color: #ffffff;
-   display: flex;
-   justify-content: space-around;
+
+    color: #fff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+    clear: none;
 }
 
-.pie-pagina ul {
+
+.footer ul {
+
     list-style-type: none;
+
     padding: 0;
-    font-size: 1.5rem;
+
 }
 
-.contacto {
-    font-size: 2rem;
+
+.footer ul li {
+
+    display: inline;
+
+    margin: 0 10px;
+
 }
 
-.pago {
-    font-size: 2rem;
+
+.footer ul li a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+
+.footer ul li a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .product {
+        width: calc(33.33% - 20px);
+    }
+
+    .filter {
+        max-width: 300px;
+        margin-right: 20px;
+    }
 }
